@@ -1,0 +1,80 @@
+{
+  "BmapAndSEO": {
+    "SEO": "./resultsSEO/Bmap-2024-12-05-161711",
+    "max_order": 2
+  },
+  "BunchPara": {
+    "InjTimeNanoSec": [
+      0
+    ],
+    "LongitudeDEk": [
+      0.004
+    ],
+    "LongitudeDistType": "gauss",
+    "LongitudeT": [
+      100
+    ],
+    "ParticleDensity": 30000000.0,
+    "ParticleNum": [
+      1000
+    ],
+    "RF0": 0.13194689145077132,
+    "TransverseDistType": "gauss",
+    "TransverseREmit": [
+      1
+    ],
+    "TransverseZEmit": [
+      1
+    ]
+  },
+  "DumpPara": {
+    "modules": [
+      {
+        "num_particles_to_dump_global": 100,
+        "save_folder": "./dump5/step_dump_sc_1",
+        "step_interval": 50,
+        "type": "StepDump"
+      },
+      {
+        "dump_azimuth": 10,
+        "save_folder": "./dump5/step_dump_sc_3",
+        "type": "PositionDump"
+      },
+      {
+        "save_folder": "./dump5/step_dump_sc_2",
+        "step_interval": 500,
+        "type": "StepDumpBunch"
+      }
+    ]
+  },
+  "Emap": {
+    "maps": "./emaps",
+    "voltage_kV": 50
+  },
+  "check": {
+    "CheckBunch": true,
+    "PlotRMS": [
+      4,
+      4,
+      4
+    ]
+  },
+  "config": {
+    "date": 1734079541.358043
+  },
+  "track": {
+    "enable_SC": true,
+    "start_EkMeV": 3.0,
+    "start_azimuth": 0.0,
+    "step_condition": {
+      "max_step_fi": 0.08,
+      "min_step_fi": 0.13,
+      "step_fi": 0.1
+    },
+    "stop_condition": {
+      "max_stepsN": 15000,
+      "max_time": Infinity,
+      "max_turn": 12000.5
+    }
+  }
+}
