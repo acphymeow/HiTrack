@@ -464,6 +464,18 @@ class FFAG_Bunch:
         self.zmin_Global = comm.allreduce(zmin_Local, op=MPI.MIN)
         self.zmax_Global = comm.allreduce(zmax_Local, op=MPI.MAX)
 
+        # **扩大计算域范围**（例如扩展 20%）
+        x_range = self.xmax_Global - self.xmin_Global
+        y_range = self.ymax_Global - self.ymin_Global
+        z_range = self.zmax_Global - self.zmin_Global
+
+        self.xmin_Global -= 0.2 * x_range
+        self.xmax_Global += 0.2 * x_range
+        self.ymin_Global -= 0.2 * y_range
+        self.ymax_Global += 0.2 * y_range
+        self.zmin_Global -= 0.2 * z_range
+        self.zmax_Global += 0.2 * z_range
+
         return self.xmin_Global, self.xmax_Global, self.ymin_Global, self.ymax_Global, self.zmin_Global, self.zmax_Global
 
     def DistributeChargeLocal(self, n, m, l):

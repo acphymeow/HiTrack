@@ -482,7 +482,7 @@ def Bunch_SC_Calculator(Bunch_obj):
     # 判断 Bunch_obj 中的网格信息是否存在，如果为空则直接返回
     if Bunch_obj.xmax_Global is None or Bunch_obj.zmax_Global is None or Bunch_obj.Zgrid is None:
         print("Grid information is missing. Cannot calculate space charge electric field.")
-        return None, None, None
+        return None, None, None, None, None, None, None, None
 
     # 提取 FFAG_Bunch 中存活粒子的笛卡尔坐标
     local_points, Local_ID, Global_ID = Bunch_obj.GetLocalCoordinates()

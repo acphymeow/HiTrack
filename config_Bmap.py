@@ -10,6 +10,8 @@ config_data = {}
 # some general parameters
 config = dict()
 config['date'] = time.time()
+config['folder'] = '.\\Bmaps'
+config['expand_order'] = 3
 
 ###############################################################
 # machine parameters
